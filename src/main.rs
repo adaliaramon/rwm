@@ -1857,10 +1857,7 @@ fn updatestatus() {
             size_of_val(&*addr_of!(bindgen::stext)) as u32,
         ) == 0
         {
-            libc::strcpy(
-                addr_of_mut!(bindgen::stext) as *mut _,
-                c"rwm-1.0".as_ptr(),
-            );
+            libc::strcpy(addr_of_mut!(bindgen::stext) as *mut _, c"".as_ptr());
         }
         drawbar(bindgen::selmon);
     }
